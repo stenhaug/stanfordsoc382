@@ -3,32 +3,24 @@
 
 # stanfordsoc381
 
-<!-- badges: start -->
+# Installation
 
-<!-- badges: end -->
+1.  [Download R from this site](https://cran.r-project.org/)
+2.  [Download Rstudio from this
+    site](https://www.rstudio.com/products/rstudio/download/#download)
+3.  Open up Rstudio on your computer and then install the tidyverse
+    packages by running the following code:
 
-The goal of stanfordsoc381 is to …
-
-What is special about using `README.Rmd` instead of just `README.md`?
-You can include R chunks like so:
+<!-- end list -->
 
 ``` r
-summary(cars)
-#>      speed           dist       
-#>  Min.   : 4.0   Min.   :  2.00  
-#>  1st Qu.:12.0   1st Qu.: 26.00  
-#>  Median :15.0   Median : 36.00  
-#>  Mean   :15.4   Mean   : 42.98  
-#>  3rd Qu.:19.0   3rd Qu.: 56.00  
-#>  Max.   :25.0   Max.   :120.00
+install.packages("tidyverse")
 ```
 
-You’ll still need to render `README.Rmd` regularly, to keep `README.md`
-up-to-date.
+If you get confused, see [this 3 minute YouTube
+video](https://www.youtube.com/watch?v=u1r5XTqrCTQ) on how to install
+packages.
 
-You can also embed plots, for example:
-
-![](README_files/figure-gfm/pressure-1.png)<!-- -->
-
-In that case, don’t forget to commit and push the resulting figure
-files, so they display on GitHub\!
+We will go over this in class, but if you’d like to get familiarized
+with Rstudio ahead of time, check out [this 10 minute YouTube
+video.](https://www.youtube.com/watch?v=lTTJPRwnONE&list=PLLxj8fULvXwGOf8uHlL4Tr62oXSB5k_in&index=2)

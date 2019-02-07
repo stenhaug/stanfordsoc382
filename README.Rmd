@@ -12,23 +12,18 @@ knitr::opts_chunk$set(
 ```
 # stanfordsoc381
 
-<!-- badges: start -->
-<!-- badges: end -->
+# Installation
 
-The goal of stanfordsoc381 is to ...
+1. [Download R from this site](https://cran.r-project.org/)
+2. [Download Rstudio from this site](https://www.rstudio.com/products/rstudio/download/#download)
+3. Open up Rstudio on your computer and then install the tidyverse packages by running the following code: 
 
-What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
-
-```{r cars}
-summary(cars)
+```{r eval = FALSE}
+install.packages("tidyverse")
 ```
 
-You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date.
+If you get confused, see [this 3 minute YouTube video](https://www.youtube.com/watch?v=u1r5XTqrCTQ) on how to install packages.
 
-You can also embed plots, for example:
+We will go over this in class, but if you'd like to get familiarized with Rstudio ahead of time, check out [this 10 minute YouTube video.](https://www.youtube.com/watch?v=lTTJPRwnONE&list=PLLxj8fULvXwGOf8uHlL4Tr62oXSB5k_in&index=2)
 
-```{r pressure, echo = FALSE}
-plot(pressure)
-```
 
-In that case, don't forget to commit and push the resulting figure files, so they display on GitHub!
