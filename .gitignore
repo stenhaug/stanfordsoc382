@@ -1,3 +1,9 @@
+pre_*
+
+data-raw/cps*
+data-raw/means*
+data-raw/create_hamsters_csv.R
+
 .Rhistory
 .RData
 .Rproj.user
