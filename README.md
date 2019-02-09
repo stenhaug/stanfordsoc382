@@ -1,8 +1,6 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# stanfordsoc381
-
 # Installation
 
 1.  [Download R from this site](https://cran.r-project.org/)
