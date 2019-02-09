@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# stanfordsoc381
+# stanfordsoc382
 
 # Installation
 
