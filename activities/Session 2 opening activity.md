@@ -12,7 +12,7 @@
 
 5. What did that code do? 
 
-6. Run the code following code:
+6. Run the following code:
 
 > arrange(many, hamsters, hamsers_cages)
 
