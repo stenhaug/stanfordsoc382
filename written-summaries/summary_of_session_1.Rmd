@@ -1,0 +1,123 @@
+---
+title: "Summary of session 1"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+You can find [a screencast of this session here](http://www.youtube.com/watch?v=ezerknbEDKw).
+
+We started by opening Rstudio and taking a look around. [This YouTube video does something similar]().
+
+# Workflow basics
+
+We created a new, empty folder on our desktop to work in.
+
+We then created an Rproject in that folder by doing the following:
+
+- Clicking the icon in the top right of Rstudio
+- Selecting new project
+- Selecting from existing directory
+- Then selecting the empty folder on our desktop
+
+We then navigated to that folder and noticed there was a new .Rproj file in that folder. 
+
+By opening up that .Rproj file you start an R session in that folder.
+
+# Objects and assignment
+
+We first talked about assignment and the idea of objects in R. This is a big difference between R and Stata — in Stata you have one main dataset that you always work, in R you can have as many objects as you want.
+
+This create an object named "x" in R that holds the value 2:
+
+```{r}
+x <- 2
+```
+
+This is another way of creating the same object:
+
+```{r}
+x = 2
+```
+
+You can also do this, but it isn't a good idea:
+
+```{r}
+2 -> x
+```
+
+You can see what objects you have by looking at the environment tab.
+
+# Intro to the pipe %>%
+
+We loaded the tidyverse package that everyone installed before class:
+
+```{r}
+library(tidyverse)
+```
+
+We noticed that these two lines of code both do the same thing:
+
+```{r}
+median(mean(1:10))
+
+1:10 %>% mean() %>% median()
+```
+
+The first line of code you read from the inside out. The second line of code you read from left to right, which many people find more natural.
+
+# Working with a simple data set
+
+We downloaded a simple hamsters data set by going [here](https://raw.githubusercontent.com/stenhaug/stanfordsoc382/master/data-raw/hamsters.csv) and right clicking, then choosing save as to the folder we're working in.
+
+We then read in the data and looked at it:
+
+```{r}
+hamsters = read_csv("data-raw/hamsters.csv")
+
+hamsters
+```
+
+Next we filtered to only look at Amy's:
+
+```{r}
+filter(hamsters, name == "Amy")
+```
+
+We noticed that running that function didn't change hamsters, it just run the function and printed to the screen.
+
+If we we wanted to save the results, we could do something like this:
+
+```{r}
+hamsters_only_amy = filter(hamsters, name == "Amy")
+
+hamsters_only_amy
+```
+
+We noticed the equivalence between the following two lines of code:
+
+```{r}
+filter(hamsters, name == "Amy")
+
+hamsters %>% filter(name == "Amy")
+```
+
+We used the `select` function to remove the hamster_cages column:
+
+```{r}
+select(hamsters_only_amy, -hamster_cages)
+```
+
+We closed by comparing the two ways of filtering to only look at Amy and then removing the hamster_cages column:
+
+```{r}
+# read left to right
+hamsters %>% 
+    filter(name == "Amy") %>% 
+    select(-hamster_cages)
+
+# read inside out
+select(filter(hamsters, name == "Amy"), -hamster_cages)
+```

@@ -1,7 +1,5 @@
 gd
-
-pre_*
-
+prep/
 data-raw/cps*
 data-raw/means*
 data-raw/create_hamsters_csv.R
