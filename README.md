@@ -20,7 +20,8 @@ wars tweets:
 
 You can find a screencast of the first session
 [here](http://www.youtube.com/watch?v=ezerknbEDKw). You can also find a
-written summary [here]().
+written summary
+[here](https://github.com/stenhaug/stanfordsoc382/blob/master/written-summaries/summary_of_session_1.md).
 
 # Installation
 
