@@ -1,5 +1,6 @@
 gd
 prep/
+camtasia/
 data-raw/cps*
 data-raw/means*
 data-raw/create_hamsters_csv.R

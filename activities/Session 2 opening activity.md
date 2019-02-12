@@ -1,4 +1,4 @@
-Work with a partner. Go at the same pace as your partner, working through each step together.
+**Work with a partner. Go at the same pace as your partner, working through each step together.**
 
 1. Load in the hamsters data set like we did last time
 
