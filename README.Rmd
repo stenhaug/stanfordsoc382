@@ -15,15 +15,13 @@ knitr::opts_chunk$set(
 
 Before the first session, students followed the installation instructions below.
 
+You can find a screencast of the first session [here](http://www.youtube.com/watch?v=ezerknbEDKw). You can also find a written summary [here](https://github.com/stenhaug/stanfordsoc382/blob/master/written-summaries/summary_of_session_1.md).
+
 We started the first session by laughing about a few fantastic language wars tweets: 
 
 - [David Jaeger says uses what works for you](https://twitter.com/DavidAJaeger/status/1092755742950604800)
-
 - [Jeremy Freese and Hadley Wickham joke about a Stata vs. R competition](https://twitter.com/hadleywickham/status/1093347766368116737)
-
 - [Kieran Healy makes a funny graph](https://twitter.com/kjhealy/status/1093524538002939904)
-
-You can find a screencast of the first session [here](http://www.youtube.com/watch?v=ezerknbEDKw). You can also find a written summary [here](https://github.com/stenhaug/stanfordsoc382/blob/master/written-summaries/summary_of_session_1.md).
 
 # Installation
 
