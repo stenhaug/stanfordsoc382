@@ -23,6 +23,20 @@ wars tweets:
   - [Kieran Healy makes a funny
     graph](https://twitter.com/kjhealy/status/1093524538002939904)
 
+## Session 2
+
+You can find a screencast of the second session
+[here](http://www.youtube.com/watch?v=HP07qFrltrQ).
+
+You can find the [opening activity
+here](https://github.com/stenhaug/stanfordsoc382/blob/master/activities/Session%202%20opening%20activity.md).
+And [its solution
+here](https://github.com/stenhaug/stanfordsoc382/blob/master/activities/Session_2_Opening_Activity_Solution.md).
+
+You can also find a written summary where we walked through a much
+larger data set including cleaning, graphing, and modeling
+[here](https://github.com/stenhaug/stanfordsoc382/blob/master/written-summaries/summary_of_session_2.md).
+
 # Resources
 
   - <http://r.stanford.edu>
