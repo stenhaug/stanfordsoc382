@@ -1,0 +1,58 @@
+---
+title: "Session 2 Opening Activity Solution"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+First be sure to load the tidyverse packages.
+
+```{r, message=FALSE}
+library(tidyverse)
+```
+
+1. Load the data
+
+```{r}
+hamsters <- read_csv(here::here("data-raw", "hamsters.csv"))
+```
+
+2. Create hamsters_many
+
+```{r}
+hamsters_many <- filter(hamsters, hamsters >= 5)
+```
+
+3. Create hamsters_many_cages
+
+```{r}
+hamsters_many_cages <- filter(hamsters, hamster_cages >= 3)
+```
+
+4. Bind rows
+
+```{r}
+many <- bind_rows(hamsters_many, hamsters_many_cages)
+```
+
+5. The code stacked the two data frames hamsters_many and hamsters_many_cages on top of each other
+
+6. Arrange
+
+```{r}
+arrange(many, hamsters, hamster_cages)
+```
+
+7. The code sorted the many data frame
+
+8-11. save.image() saves all objects in the workspace. write_rds() saves a single object. The error was because we didn't have a data-clean folder.
+
+
+
+
+
+
+
+

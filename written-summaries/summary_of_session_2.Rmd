@@ -1,0 +1,99 @@
+---
+title: "summary_of_session_2"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+As always, we started by loading in the tidyverse.
+
+```{r, message=FALSE}
+library(tidyverse)
+```
+
+# Reading in the data
+
+The cps data we aim to analyze is a dta file. We weren't quite sure how to read that in so we googled read in stata files into r and then added "hadley" to the search and filtered to only see results in the last 1 year.
+
+We found our solution in the `haven` package:
+
+```{r}
+library(haven)
+
+cps <- read_dta(here::here("data-raw", "cps_mar_2000_new with additional vars.dta"))
+```
+
+We also noticed that there is a way to look at the variable labels:
+
+```{r}
+print_labels(cps$sex)
+```
+
+# Cleaning the data
+
+We played around with cleaning the data and eventually arrived at the following:
+
+```{r}
+cps_new <-
+    cps %>%
+    sample_frac(0.01) %>%
+    select(incwage, age, sex, yrsed) %>%
+    mutate(
+        sex = case_when(sex == 1 ~ "male", sex == 2 ~ "female"),
+        college = case_when(yrsed >= 13 ~ "college", yrsed <= 12 ~ "no_college")
+    ) %>%
+    filter(age >= 16)
+```
+
+# Plotting the data
+
+We walked through building the following plot:
+
+```{r}
+cps_new %>%
+    ggplot(aes(x = age, y = incwage)) +
+    geom_point(alpha = 0.25) +
+    facet_grid(sex ~ college) +
+    geom_smooth(method = "lm")
+```
+
+# Modeling the data
+
+Lastly, we built a linear model 
+
+```{r}
+mod <- lm(incwage ~ age + college + sex, data = cps_new)
+```
+
+Then we looked at the model using the old way with `summary`.
+
+```{r}
+summary(mod)
+```
+
+And a newer way using the `broom` package.
+
+```{r}
+library(broom)
+
+tidy(mod)
+```
+
+We noticed that the tidy function returns a data frame which we know how to work with:
+
+```{r}
+tidy(mod) %>%
+    filter(p.value <= 0.05)
+```
+
+Lastly, we used the `modelr` package to show how to use the model to add predictions and residuals to our data:
+
+```{r, message=FALSE}
+library(modelr)
+
+cps_new %>%
+    add_predictions(mod) %>%
+    add_residuals(mod)
+```
